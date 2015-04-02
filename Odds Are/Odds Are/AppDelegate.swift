@@ -124,15 +124,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print(error.localizedDescription)
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let installation = PFInstallation.currentInstallation()
+        installation.setDeviceTokenFromData(deviceToken)
+        installation.channels = ["global"]
+        installation.saveInBackground()
+        PFPush.storeDeviceToken(deviceToken)
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        print(userInfo)
+        PFPush.handlePush(userInfo)
+    }
+    
+    
     func parseInitializationWithApplication(application : UIApplication, launchOptions : [NSObject : AnyObject]?) {
-//        ParseCrashReporting.enable()
         Parse.enableLocalDatastore()
-//        
         Parse.setApplicationId("IXkfPyf1UKOPZIqV84ysnNu2agSgDWlP4xXpE4lB", clientKey: "4vjrGGx9S0viKyobmMHwAHJ9zq6YYKN0BvT70gdG")
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        let userNotificationTypes = (UIUserNotificationType.Alert |
+            UIUserNotificationType.Badge |
+            UIUserNotificationType.Sound);
+        
+        let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
+        application.registerUserNotificationSettings(settings)
+        application.registerForRemoteNotifications()
+        PFInstallation.currentInstallation().saveInBackground()
+        
     }
-
 }
 

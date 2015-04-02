@@ -23,8 +23,6 @@
 		2E5383011ABE515600B37A00 /* OAUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4077791ABE28BE00BC3EA0 /* OAUtility.swift */; };
 		2E53EC3B1ABE230A00EA1A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53EC3A1ABE230A00EA1A9A /* AppDelegate.swift */; };
 		2E53EC3E1ABE230A00EA1A9A /* Odds_Are.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E53EC3C1ABE230A00EA1A9A /* Odds_Are.xcdatamodeld */; };
-		2E53EC451ABE230A00EA1A9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E53EC441ABE230A00EA1A9A /* Images.xcassets */; };
-		2E53EC481ABE230A00EA1A9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E53EC461ABE230A00EA1A9A /* LaunchScreen.xib */; };
 		2E53EC541ABE230A00EA1A9A /* Odds_AreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53EC531ABE230A00EA1A9A /* Odds_AreTests.swift */; };
 		2E574C471AC280B300BDA972 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E574C461AC280B300BDA972 /* ProfileHeaderView.swift */; };
 		2E574C4A1AC36FEE00BDA972 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E574C491AC36FEE00BDA972 /* ContactTableViewCell.swift */; };
@@ -50,6 +48,8 @@
 		2E7C921B1ACC5A02001CC970 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C92111ACC5A02001CC970 /* ParseFacebookUtilsV4.framework */; };
 		2E7C921C1ACC5A02001CC970 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C92121ACC5A02001CC970 /* ParseUI.framework */; };
 		2E82C52D1ACC6D2E0076A660 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E82C52C1ACC6D2E0076A660 /* SettingsTableViewController.swift */; };
+		2EA7481D1ACDA6400044A234 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E53EC461ABE230A00EA1A9A /* LaunchScreen.xib */; };
+		2EA7481E1ACDA6B60044A234 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E53EC441ABE230A00EA1A9A /* Images.xcassets */; };
 		2ED670161ACCF1C400A60411 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED670141ACCF1C400A60411 /* FBSDKCoreKit.framework */; };
 		2ED670171ACCF1C400A60411 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED670151ACCF1C400A60411 /* FBSDKLoginKit.framework */; };
 		2EED24761AC8EFD100B1DCCF /* NewOddsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED24751AC8EFD100B1DCCF /* NewOddsViewController.swift */; };
@@ -371,9 +371,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E40777C1ABE2F6300BC3EA0 /* logowhitegradient_full.png in Resources */,
-				2E53EC481ABE230A00EA1A9A /* LaunchScreen.xib in Resources */,
 				2E5382FB1ABE43A700B37A00 /* Neou-Bold.ttf in Resources */,
-				2E53EC451ABE230A00EA1A9A /* Images.xcassets in Resources */,
+				2EA7481D1ACDA6400044A234 /* LaunchScreen.xib in Resources */,
+				2EA7481E1ACDA6B60044A234 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,8 +527,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -539,7 +539,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "56d07934-19cd-4cba-89bd-ad1b1153ab0d";
 				SWIFT_OBJC_BRIDGING_HEADER = "Odds Are-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -550,8 +550,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -562,7 +562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "56d07934-19cd-4cba-89bd-ad1b1153ab0d";
 				SWIFT_OBJC_BRIDGING_HEADER = "Odds Are-Bridging-Header.h";
 			};
 			name = Release;

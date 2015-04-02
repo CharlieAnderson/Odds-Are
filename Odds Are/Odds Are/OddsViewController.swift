@@ -74,6 +74,8 @@ class OddsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let newOdds = NewOddsViewController()
         let nc = UINavigationController(rootViewController: newOdds)
         presentViewController(nc, animated: true, completion: nil)
+        
+        //testing
     }
     
     func search() {
