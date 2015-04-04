@@ -66,8 +66,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func profileHeaderView() -> ProfileHeaderView {
         let headerView = ProfileHeaderView(frame: CGRectMake(0, 0, width, 200))
         headerView.profileImage = UIImage(named: "profile")
-        headerView.title = "Odds Master"
-        headerView.name = "Jack Arendt"
+        headerView.title = OAUser.currentUser().oddsTitle
+        headerView.name = OAUser.currentUser().name
         return headerView
     }
     

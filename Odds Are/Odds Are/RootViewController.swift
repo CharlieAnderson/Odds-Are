@@ -89,19 +89,15 @@ class RootViewController: UIViewController {
     }
     
     func userDidLogout() {
+        OASession.sharedSession.logout()
         self.navigationController?.popToRootViewControllerAnimated(false)
-        if FBSDKAccessToken.currentAccessToken() != nil { //temporary before login and sso works
-            presentMainInterface()
-        }
-        else {
-            loginVC = LoginViewController()
-            loginVC?.modalTransitionStyle = .CoverVertical
-            if let lvc = loginVC {
-                println(self.view.window?.rootViewController)
-                presentViewController(lvc, animated: true, completion: nil)
-                login_shown = true
-            }
+        loginVC = LoginViewController()
+        loginVC?.modalTransitionStyle = .CoverVertical
+        if let lvc = loginVC {
+            println(self.view.window?.rootViewController)
+            presentViewController(lvc, animated: true, completion: nil)
+            login_shown = true
+            self.newTabBarController.selectedIndex = 0
         }
     }
-    
 }

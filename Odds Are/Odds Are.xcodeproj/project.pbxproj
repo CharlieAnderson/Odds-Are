@@ -44,14 +44,20 @@
 		2E7C92131ACC5A02001CC970 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C92091ACC5A02001CC970 /* Bolts.framework */; };
 		2E7C92181ACC5A02001CC970 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C920E1ACC5A02001CC970 /* Parse.framework */; };
 		2E7C92191ACC5A02001CC970 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C920F1ACC5A02001CC970 /* ParseCrashReporting.framework */; };
-		2E7C921A1ACC5A02001CC970 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C92101ACC5A02001CC970 /* ParseFacebookUtils.framework */; };
 		2E7C921B1ACC5A02001CC970 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C92111ACC5A02001CC970 /* ParseFacebookUtilsV4.framework */; };
 		2E7C921C1ACC5A02001CC970 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C92121ACC5A02001CC970 /* ParseUI.framework */; };
 		2E82C52D1ACC6D2E0076A660 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E82C52C1ACC6D2E0076A660 /* SettingsTableViewController.swift */; };
+		2EA3193A1ACE108E00E9028B /* OAUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA319391ACE108E00E9028B /* OAUser.swift */; };
+		2EA3193C1ACE133500E9028B /* OAUserPrivateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3193B1ACE133500E9028B /* OAUserPrivateData.swift */; };
 		2EA7481D1ACDA6400044A234 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E53EC461ABE230A00EA1A9A /* LaunchScreen.xib */; };
 		2EA7481E1ACDA6B60044A234 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E53EC441ABE230A00EA1A9A /* Images.xcassets */; };
+		2EBCEDFC1ACF768B00B9DD6F /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBCEDF91ACF768A00B9DD6F /* FBAudienceNetwork.framework */; };
+		2EBCEDFD1ACF768B00B9DD6F /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBCEDFA1ACF768B00B9DD6F /* FBSDKMessengerShareKit.framework */; };
+		2EBCEDFE1ACF768B00B9DD6F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBCEDFB1ACF768B00B9DD6F /* FBSDKShareKit.framework */; };
 		2ED670161ACCF1C400A60411 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED670141ACCF1C400A60411 /* FBSDKCoreKit.framework */; };
 		2ED670171ACCF1C400A60411 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED670151ACCF1C400A60411 /* FBSDKLoginKit.framework */; };
+		2EE8E72D1ACF38E400DA14A2 /* OAChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE8E72C1ACF38E400DA14A2 /* OAChallenge.swift */; };
+		2EE8E72F1ACF3CE800DA14A2 /* OASession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE8E72E1ACF3CE800DA14A2 /* OASession.swift */; };
 		2EED24761AC8EFD100B1DCCF /* NewOddsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED24751AC8EFD100B1DCCF /* NewOddsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,14 +113,18 @@
 		2E7C92091ACC5A02001CC970 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		2E7C920E1ACC5A02001CC970 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		2E7C920F1ACC5A02001CC970 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
-		2E7C92101ACC5A02001CC970 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		2E7C92111ACC5A02001CC970 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Frameworks/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		2E7C92121ACC5A02001CC970 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
-		2E7C921D1ACC5B4C001CC970 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		2E7C921F1ACC5CBD001CC970 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		2E82C52C1ACC6D2E0076A660 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		2EA319391ACE108E00E9028B /* OAUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAUser.swift; sourceTree = "<group>"; };
+		2EA3193B1ACE133500E9028B /* OAUserPrivateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAUserPrivateData.swift; sourceTree = "<group>"; };
+		2EBCEDF91ACF768A00B9DD6F /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ../../FacebookSDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		2EBCEDFA1ACF768B00B9DD6F /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = ../../FacebookSDK/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		2EBCEDFB1ACF768B00B9DD6F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		2ED670141ACCF1C400A60411 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		2ED670151ACCF1C400A60411 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		2EE8E72C1ACF38E400DA14A2 /* OAChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAChallenge.swift; sourceTree = "<group>"; };
+		2EE8E72E1ACF3CE800DA14A2 /* OASession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OASession.swift; sourceTree = "<group>"; };
 		2EED24751AC8EFD100B1DCCF /* NewOddsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOddsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +133,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EBCEDFC1ACF768B00B9DD6F /* FBAudienceNetwork.framework in Frameworks */,
+				2EBCEDFD1ACF768B00B9DD6F /* FBSDKMessengerShareKit.framework in Frameworks */,
+				2EBCEDFE1ACF768B00B9DD6F /* FBSDKShareKit.framework in Frameworks */,
 				2ED670161ACCF1C400A60411 /* FBSDKCoreKit.framework in Frameworks */,
 				2ED670171ACCF1C400A60411 /* FBSDKLoginKit.framework in Frameworks */,
 				2E7C92131ACC5A02001CC970 /* Bolts.framework in Frameworks */,
@@ -141,7 +154,6 @@
 				2E7C90611ACC4F21001CC970 /* MobileCoreServices.framework in Frameworks */,
 				2E7C90621ACC4F21001CC970 /* QuartzCore.framework in Frameworks */,
 				2E7C905A1ACC4F09001CC970 /* CFNetwork.framework in Frameworks */,
-				2E7C921A1ACC5A02001CC970 /* ParseFacebookUtils.framework in Frameworks */,
 				2E7C90581ACC4EFA001CC970 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +208,7 @@
 		2E53EC371ABE230A00EA1A9A /* Odds Are */ = {
 			isa = PBXGroup;
 			children = (
+				2EDD18EC1AD09D3700DA2102 /* Models */,
 				2E53EC3A1ABE230A00EA1A9A /* AppDelegate.swift */,
 				2E5382FD1ABE4D0F00B37A00 /* Controllers */,
 				2E4077791ABE28BE00BC3EA0 /* OAUtility.swift */,
@@ -258,14 +271,14 @@
 		2E7C90561ACC4ECA001CC970 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EBCEDF91ACF768A00B9DD6F /* FBAudienceNetwork.framework */,
+				2EBCEDFA1ACF768B00B9DD6F /* FBSDKMessengerShareKit.framework */,
+				2EBCEDFB1ACF768B00B9DD6F /* FBSDKShareKit.framework */,
 				2ED670141ACCF1C400A60411 /* FBSDKCoreKit.framework */,
 				2ED670151ACCF1C400A60411 /* FBSDKLoginKit.framework */,
-				2E7C921F1ACC5CBD001CC970 /* FBSDKLoginKit.framework */,
-				2E7C921D1ACC5B4C001CC970 /* FBSDKCoreKit.framework */,
 				2E7C92091ACC5A02001CC970 /* Bolts.framework */,
 				2E7C920E1ACC5A02001CC970 /* Parse.framework */,
 				2E7C920F1ACC5A02001CC970 /* ParseCrashReporting.framework */,
-				2E7C92101ACC5A02001CC970 /* ParseFacebookUtils.framework */,
 				2E7C92111ACC5A02001CC970 /* ParseFacebookUtilsV4.framework */,
 				2E7C92121ACC5A02001CC970 /* ParseUI.framework */,
 				2E7C92071ACC5737001CC970 /* Social.framework */,
@@ -282,6 +295,17 @@
 				2E7C90571ACC4EFA001CC970 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EDD18EC1AD09D3700DA2102 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2EA319391ACE108E00E9028B /* OAUser.swift */,
+				2EA3193B1ACE133500E9028B /* OAUserPrivateData.swift */,
+				2EE8E72C1ACF38E400DA14A2 /* OAChallenge.swift */,
+				2EE8E72E1ACF3CE800DA14A2 /* OASession.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE8E72F1ACF3CE800DA14A2 /* OASession.swift in Sources */,
 				2E4077781ABE267800BC3EA0 /* LoginViewController.swift in Sources */,
 				2E53EC3E1ABE230A00EA1A9A /* Odds_Are.xcdatamodeld in Sources */,
 				2E574C4A1AC36FEE00BDA972 /* ContactTableViewCell.swift in Sources */,
@@ -400,13 +425,16 @@
 				2E4077761ABE249000BC3EA0 /* RootViewController.swift in Sources */,
 				2E82C52D1ACC6D2E0076A660 /* SettingsTableViewController.swift in Sources */,
 				2E574C4C1AC3718C00BDA972 /* StatisticsTableViewCell.swift in Sources */,
+				2EA3193A1ACE108E00E9028B /* OAUser.swift in Sources */,
 				2E33C2901AC4A71500657C52 /* CircleGradientView.swift in Sources */,
+				2EA3193C1ACE133500E9028B /* OAUserPrivateData.swift in Sources */,
 				2E40777A1ABE28BE00BC3EA0 /* OAUtility.swift in Sources */,
 				2E66820F1ACC831F0033F869 /* ChallengeViewController.swift in Sources */,
 				2EED24761AC8EFD100B1DCCF /* NewOddsViewController.swift in Sources */,
 				2E5382F71ABE347600B37A00 /* OddsViewController.swift in Sources */,
 				2E574C471AC280B300BDA972 /* ProfileHeaderView.swift in Sources */,
 				2E33C28C1AC49ABC00657C52 /* NewsFeedCollectionViewCell.swift in Sources */,
+				2EE8E72D1ACF38E400DA14A2 /* OAChallenge.swift in Sources */,
 				2E5382F91ABE347C00B37A00 /* ProfileViewController.swift in Sources */,
 				2E5382F51ABE346E00B37A00 /* NewsFeedViewController.swift in Sources */,
 				2E574C4F1AC3961300BDA972 /* OddsTableViewCell.swift in Sources */,

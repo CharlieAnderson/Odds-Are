@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController, FBSDKLoginButtonDelegate {
+class SettingsTableViewController: UITableViewController{
 
     private let utility = OAUtility()
     
@@ -45,11 +45,7 @@ class SettingsTableViewController: UITableViewController, FBSDKLoginButtonDelega
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-
-        let logoutView = FBSDKLoginButton(frame: cell.bounds)
-        logoutView.delegate = self
-        
-        cell.addSubview(logoutView)
+        cell.textLabel?.text = "Logout"
         return cell
     }
 
@@ -57,12 +53,7 @@ class SettingsTableViewController: UITableViewController, FBSDKLoginButtonDelega
         return 50
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        print("login")
-    }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         NSNotificationCenter.defaultCenter().postNotificationName(utility.userDidLogOutNotification, object: nil)
     }
-
 }

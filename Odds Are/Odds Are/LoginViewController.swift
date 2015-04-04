@@ -36,16 +36,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         name.adjustsFontSizeToFitWidth = true
         view.addSubview(name)
         
-//        let loginButton = UIButton(frame: CGRectMake(width * 0.1, height * 0.8, width * 0.8, 50))
-//        loginButton.setImage(UIImage(named: "login_with_facebook"), forState: .Normal)
-//        loginButton.setImage(UIImage(named: "login_with_facebook_pressed"), forState: .Highlighted)
-//        loginButton.addTarget(self, action: "login", forControlEvents: .TouchUpInside)
-//        view.addSubview(loginButton)
+        let loginButton = UIButton(frame: CGRectMake(width * 0.1, height * 0.8, width * 0.8, 50))
+        loginButton.setImage(UIImage(named: "login_with_facebook"), forState: .Normal)
+        loginButton.setImage(UIImage(named: "login_with_facebook_pressed"), forState: .Highlighted)
+        loginButton.addTarget(self, action: "login", forControlEvents: .TouchUpInside)
+        view.addSubview(loginButton)
         
-        let loginView = FBSDKLoginButton(frame: CGRectMake(width * 0.1, height * 0.8, width * 0.8, 50))
-        loginView.delegate = self
-        loginView.readPermissions = utility.facebookPermissions
-        view.addSubview(loginView)
+//        let loginView = FBSDKLoginButton(frame: CGRectMake(width * 0.1, height * 0.8, width * 0.8, 50))
+//        loginView.delegate = self
+//        loginView.readPermissions = utility.facebookPermissions
+//        view.addSubview(loginView)
         
         let sep = UIView(frame: CGRectMake(10, height - 30, width - 20, 1))
         sep.backgroundColor = UIColor.lightGrayColor()
@@ -66,7 +66,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func login() {
-        dismissViewControllerAnimated(true, completion: nil)
+        OASession.sharedSession.login({
+            (newUser : Bool!, error : NSError?) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
     }
     
     func learnMore() {
@@ -74,7 +77,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        login()
+        OASession.sharedSession.login({
+            (newUser : Bool!, error : NSError?) in
+            self.login()
+        })
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {

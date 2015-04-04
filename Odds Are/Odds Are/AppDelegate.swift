@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -143,7 +144,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func parseInitializationWithApplication(application : UIApplication, launchOptions : [NSObject : AnyObject]?) {
-        Parse.enableLocalDatastore()
+        
+        OAUser.registerSubclass()
+        OAUserPrivateData.registerSubclass()
+        OAChallenge.registerSubclass()
+        
+        //Parse.enableLocalDatastore()
         Parse.setApplicationId("IXkfPyf1UKOPZIqV84ysnNu2agSgDWlP4xXpE4lB", clientKey: "4vjrGGx9S0viKyobmMHwAHJ9zq6YYKN0BvT70gdG")
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
