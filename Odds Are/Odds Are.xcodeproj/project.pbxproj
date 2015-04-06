@@ -56,6 +56,9 @@
 		2EBCEDFE1ACF768B00B9DD6F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBCEDFB1ACF768B00B9DD6F /* FBSDKShareKit.framework */; };
 		2ED670161ACCF1C400A60411 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED670141ACCF1C400A60411 /* FBSDKCoreKit.framework */; };
 		2ED670171ACCF1C400A60411 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED670151ACCF1C400A60411 /* FBSDKLoginKit.framework */; };
+		2EDD18EE1AD23A8E00DA2102 /* SelectOddsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD18ED1AD23A8E00DA2102 /* SelectOddsViewController.swift */; };
+		2EDD18F01AD23EA400DA2102 /* ChallengeStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD18EF1AD23EA400DA2102 /* ChallengeStatusBar.swift */; };
+		2EDD18F61AD24B0000DA2102 /* ChallengeAcceptanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD18F51AD24B0000DA2102 /* ChallengeAcceptanceView.swift */; };
 		2EE8E72D1ACF38E400DA14A2 /* OAChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE8E72C1ACF38E400DA14A2 /* OAChallenge.swift */; };
 		2EE8E72F1ACF3CE800DA14A2 /* OASession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE8E72E1ACF3CE800DA14A2 /* OASession.swift */; };
 		2EED24761AC8EFD100B1DCCF /* NewOddsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EED24751AC8EFD100B1DCCF /* NewOddsViewController.swift */; };
@@ -123,6 +126,9 @@
 		2EBCEDFB1ACF768B00B9DD6F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		2ED670141ACCF1C400A60411 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		2ED670151ACCF1C400A60411 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		2EDD18ED1AD23A8E00DA2102 /* SelectOddsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectOddsViewController.swift; sourceTree = "<group>"; };
+		2EDD18EF1AD23EA400DA2102 /* ChallengeStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeStatusBar.swift; sourceTree = "<group>"; };
+		2EDD18F51AD24B0000DA2102 /* ChallengeAcceptanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeAcceptanceView.swift; sourceTree = "<group>"; };
 		2EE8E72C1ACF38E400DA14A2 /* OAChallenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAChallenge.swift; sourceTree = "<group>"; };
 		2EE8E72E1ACF3CE800DA14A2 /* OASession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OASession.swift; sourceTree = "<group>"; };
 		2EED24751AC8EFD100B1DCCF /* NewOddsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOddsViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				2E4077751ABE249000BC3EA0 /* RootViewController.swift */,
+				2EDD18ED1AD23A8E00DA2102 /* SelectOddsViewController.swift */,
 				2E82C52C1ACC6D2E0076A660 /* SettingsTableViewController.swift */,
 				2E5382F41ABE346E00B37A00 /* NewsFeedViewController.swift */,
 				2E5382F61ABE347600B37A00 /* OddsViewController.swift */,
@@ -249,6 +256,8 @@
 		2E574C481AC36FCB00BDA972 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				2EDD18EF1AD23EA400DA2102 /* ChallengeStatusBar.swift */,
+				2EDD18F51AD24B0000DA2102 /* ChallengeAcceptanceView.swift */,
 				2E574C461AC280B300BDA972 /* ProfileHeaderView.swift */,
 				2E5382FE1ABE4D3800B37A00 /* SegmentedTabView.swift */,
 				2E33C28F1AC4A71500657C52 /* CircleGradientView.swift */,
@@ -359,6 +368,9 @@
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 35RV9RPQY7;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
@@ -423,7 +435,9 @@
 				2E53EC3B1ABE230A00EA1A9A /* AppDelegate.swift in Sources */,
 				2E5382FF1ABE4D3800B37A00 /* SegmentedTabView.swift in Sources */,
 				2E4077761ABE249000BC3EA0 /* RootViewController.swift in Sources */,
+				2EDD18F01AD23EA400DA2102 /* ChallengeStatusBar.swift in Sources */,
 				2E82C52D1ACC6D2E0076A660 /* SettingsTableViewController.swift in Sources */,
+				2EDD18F61AD24B0000DA2102 /* ChallengeAcceptanceView.swift in Sources */,
 				2E574C4C1AC3718C00BDA972 /* StatisticsTableViewCell.swift in Sources */,
 				2EA3193A1ACE108E00E9028B /* OAUser.swift in Sources */,
 				2E33C2901AC4A71500657C52 /* CircleGradientView.swift in Sources */,
@@ -434,6 +448,7 @@
 				2E5382F71ABE347600B37A00 /* OddsViewController.swift in Sources */,
 				2E574C471AC280B300BDA972 /* ProfileHeaderView.swift in Sources */,
 				2E33C28C1AC49ABC00657C52 /* NewsFeedCollectionViewCell.swift in Sources */,
+				2EDD18EE1AD23A8E00DA2102 /* SelectOddsViewController.swift in Sources */,
 				2EE8E72D1ACF38E400DA14A2 /* OAChallenge.swift in Sources */,
 				2E5382F91ABE347C00B37A00 /* ProfileViewController.swift in Sources */,
 				2E5382F51ABE346E00B37A00 /* NewsFeedViewController.swift in Sources */,

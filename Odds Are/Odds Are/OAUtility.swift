@@ -24,22 +24,24 @@ class OAUtility : NSObject {
     //of where a challenge is in terms of progress)
     enum ChallengeStage: String {
         case ChallengeSubmitted = "challenge_submitted"
-        case OddsSet = "odds_set"
-        case ChallengeeSetOdds = "challengee_set_odds"
-        case ChallengerSetOdds = "challenger_set_odds"
-        case WaitingForResult = "waiting_for_result"
+        case OddsSet            = "odds_set"
+        case ChallengeeSetOdds  = "challengee_set_odds"
+        case ChallengerSetOdds  = "challenger_set_odds"
+        case WaitingForResult   = "waiting_for_result"
     }
     
     
-    let sunriseRed = UIColor(red: 0.964, green: 0.278, blue: 0.278, alpha: 1)
-    let lightRed = UIColor(red: 1, green: 0.3882, blue: 0.3882, alpha: 1)
-    let sunriseOrange = UIColor(red: 0.941, green: 0.655, blue: 0.2039, alpha: 1)
-    let darkGrey = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
-    let lightGrey = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1)
-    let titleFont = "Neou-Bold"
-    let lightFont = "HelveticaNeue-Light"
-    let font = "HelveticaNeue"
-    let boldFont = "HelveticaNeue-Bold"
+    let sunriseRed      = UIColor(red: 0.964, green: 0.278, blue: 0.278, alpha: 1)
+    let lightRed        = UIColor(red: 1, green: 0.3882, blue: 0.3882, alpha: 1)
+    let sunriseOrange   = UIColor(red: 0.941, green: 0.655, blue: 0.2039, alpha: 1)
+    let darkGrey        = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
+    let lightGrey       = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1)
+    let approvalGreen   = UIColor(red: 0.0627, green: 0.6980, blue: 0.2431, alpha: 1)
+    
+    let titleFont   = "Neou-Bold"
+    let lightFont   = "HelveticaNeue-Light"
+    let font        = "HelveticaNeue"
+    let boldFont    = "HelveticaNeue-Bold"
     
     let facebookPermissions = ["public_profile", "email", "user_friends"]
     let userDidLogOutNotification = "logoutNotification"

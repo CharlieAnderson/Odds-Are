@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ChallengeViewController: UIViewController {
+class ChallengeViewController: UIViewController, ChallengeAcceptanceViewDelegate {
 
     private let utility = OAUtility()
     private var height : CGFloat = 0
     private var width  : CGFloat = 0
+    
+    var statusBar : ChallengeStatusBar!
+    var challengeAcceptanceView : ChallengeAcceptanceView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +24,39 @@ class ChallengeViewController: UIViewController {
         view = utility.sunriseGradient(height, width: width, rotated: true)
         
         navigationItem.titleView = navigationTitle()
-        // Do any additional setup after loading the view.
+        
+        statusBar = ChallengeStatusBar(frame: CGRectMake(0, 0, width, 30))
+        statusBar.status = "Needs Approval"
+        view.addSubview(statusBar)
+        
+        challengeAcceptanceView = ChallengeAcceptanceView(frame: CGRectMake(0, 30, width, 0.64 * width))
+        challengeAcceptanceView.challenge = "Go to Starbucks and get me the largest drink they have."
+        challengeAcceptanceView.delegate = self
+        view.addSubview(challengeAcceptanceView)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: Challenge View Delegate Methods
+    func rejectedButtonPressed() {
+        highlight(utility.sunriseRed, title: "Challenge Rejected")
+    }
+    
+    func acceptedButtonPressed() {
+        highlight(utility.approvalGreen, title: "Challenge Accepted")
+    }
+    
+    
+    func highlight(color : UIColor, title: String) {
+        statusBar.animateStatus(title, highlightColor: color, completion: { (finished : Bool) in
+            if !finished {
+                
+            }
+        })
     }
     
     func navigationTitle() -> UIView {
@@ -51,16 +81,4 @@ class ChallengeViewController: UIViewController {
         v.frame = CGRectMake(0, 0, nameLabel.frame.origin.x + nameLabel.frame.size.width, 44)
         return v
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
