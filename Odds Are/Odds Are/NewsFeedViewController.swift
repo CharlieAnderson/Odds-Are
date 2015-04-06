@@ -24,13 +24,11 @@ class NewsFeedViewController: UIViewController, UICollectionViewDelegateFlowLayo
         width = view.bounds.size.width
         let gradient = utility.sunriseGradient(height, width: width, rotated: true)
         view = gradient
-        
-        
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .Vertical
         let collectionViewHeight = height - 20
-        collectionView = UICollectionView(frame: CGRectMake(0, 0, width, collectionViewHeight - 44 - 49), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: CGRectMake(0, 0, width, height), collectionViewLayout: layout)
         collectionView.registerClass(NewsFeedCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -51,12 +49,20 @@ class NewsFeedViewController: UIViewController, UICollectionViewDelegateFlowLayo
         searchBar.alpha = 0
         navigationItem.titleView = nil
         addNavBarButtons()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "statusBarChanged", name: utility.statusBarChangeNotification, object: nil)
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func statusBarChanged() {
+        height = view.bounds.size.height
+        width = view.bounds.size.width
+        collectionView.frame = CGRectMake(0, 0, width, height)
     }
     
     // MARK: Nav bar methods

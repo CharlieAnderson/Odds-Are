@@ -61,13 +61,25 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         tableView.reloadData()
         addNavBarButtons()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "statusBarChanged", name: utility.statusBarChangeNotification, object: nil)
+    }
+
+    func statusBarChanged() {
+        height = view.bounds.size.height
+        width = view.bounds.size.width
+        tableView.frame = CGRectMake(0, 0, width, height)
     }
     
     func profileHeaderView() -> ProfileHeaderView {
         let headerView = ProfileHeaderView(frame: CGRectMake(0, 0, width, 200))
-        headerView.profileImage = UIImage(named: "profile")
         headerView.title = OAUser.currentUser().oddsTitle
         headerView.name = OAUser.currentUser().name
+        
+//        OAUser.currentUser().profileImage({ (image : UIImage) in
+//            headerView.profileImage = image
+//        })
+        headerView.profileImage = OAUser.currentUser().profileImageOnMainQueue()
         return headerView
     }
     
@@ -102,7 +114,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }, { finished in
                 self.navigationItem.titleView = nil
                 self.addNavBarButtons()
-                
         })
     }
     

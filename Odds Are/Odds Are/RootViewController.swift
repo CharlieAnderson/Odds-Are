@@ -28,7 +28,7 @@ class RootViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        if FBSDKAccessToken.currentAccessToken() != nil { //temporary before login and sso works
+        if OAUser.currentUser() != nil && PFFacebookUtils.isLinkedWithUser(OAUser.currentUser()) {
             presentMainInterface()
         }
         else {
@@ -78,15 +78,22 @@ class RootViewController: UIViewController {
             settingsNC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "settings_tab"), selectedImage: nil)
             
             newTabBarController.setViewControllers([newsNC, oddsNC, profileNC, settingsNC], animated: false)
-            
+            newTabBarController.tabBar.autoresizingMask = UIViewAutoresizing.FlexibleTopMargin
             newTabBarController.tabBar.tintColor = utility.sunriseRed
             newTabBarController.tabBar.translucent = false;
             self.navigationController?.setViewControllers([self, newTabBarController], animated: false)
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "statusBarChanged", name: utility.statusBarChangeNotification, object: nil)
         }
         else {
             print("allocation failed")
         }
     }
+    
+    func statusBarChanged() {
+        
+    }
+
     
     func userDidLogout() {
         OASession.sharedSession.logout()

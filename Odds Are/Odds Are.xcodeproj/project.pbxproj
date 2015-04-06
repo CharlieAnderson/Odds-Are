@@ -211,7 +211,6 @@
 				2EDD18EC1AD09D3700DA2102 /* Models */,
 				2E53EC3A1ABE230A00EA1A9A /* AppDelegate.swift */,
 				2E5382FD1ABE4D0F00B37A00 /* Controllers */,
-				2E4077791ABE28BE00BC3EA0 /* OAUtility.swift */,
 				2E574C481AC36FCB00BDA972 /* Custom Views */,
 				2E574C4D1AC378AA00BDA972 /* Reusable Cells */,
 				2E53EC441ABE230A00EA1A9A /* Images.xcassets */,
@@ -304,6 +303,7 @@
 				2EA3193B1ACE133500E9028B /* OAUserPrivateData.swift */,
 				2EE8E72C1ACF38E400DA14A2 /* OAChallenge.swift */,
 				2EE8E72E1ACF3CE800DA14A2 /* OASession.swift */,
+				2E4077791ABE28BE00BC3EA0 /* OAUtility.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

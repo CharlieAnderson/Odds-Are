@@ -10,7 +10,7 @@ import UIKit
 
 class OAUtility : NSObject {
     
-    
+    //This is a higher level view of a challenge (used mainly in UI)
     enum OddsStage {
         case NeedsApproval  //used when you propose odds, but need it to be accepted
         case InProgress     //used when a challenge is in progress, but not completed
@@ -18,6 +18,16 @@ class OAUtility : NSObject {
         case VideoPresent   //used when a challenge is completed, and a video is present
         case PhotoPresent   //used when a challenge is completed, and a photo is present
         case NotSuccessful  //used when a challenge is completed, but not successful
+    }
+    
+    //This is for individual stages of a challenge (used mainly for parse to keep track
+    //of where a challenge is in terms of progress)
+    enum ChallengeStage: String {
+        case ChallengeSubmitted = "challenge_submitted"
+        case OddsSet = "odds_set"
+        case ChallengeeSetOdds = "challengee_set_odds"
+        case ChallengerSetOdds = "challenger_set_odds"
+        case WaitingForResult = "waiting_for_result"
     }
     
     
@@ -33,6 +43,7 @@ class OAUtility : NSObject {
     
     let facebookPermissions = ["public_profile", "email", "user_friends"]
     let userDidLogOutNotification = "logoutNotification"
+    let statusBarChangeNotification = "statusBarChange"
     
     override init() {
         super.init()

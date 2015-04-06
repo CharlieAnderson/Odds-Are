@@ -17,6 +17,17 @@ class OAUser: PFUser, PFSubclassing {
         return "User"
     }
     
+    func profileImage(completion: (image : UIImage) -> ()) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) { // 1
+            let image = UIImage(data: self.profilePicture.getData()!)
+            completion(image:image!)
+        }
+    }
+    
+    func profileImageOnMainQueue() -> UIImage! {
+        return UIImage(data: self.profilePicture.getData())
+    }
+    
     //My variables
     @NSManaged var name : String
     @NSManaged var firstName : String
@@ -24,5 +35,6 @@ class OAUser: PFUser, PFSubclassing {
     @NSManaged var gender : String
     @NSManaged var oddsTitle: String
     @NSManaged var facebookID : String
+    @NSManaged var profilePicture : PFFile
     @NSManaged var privateData : OAUserPrivateData
 }

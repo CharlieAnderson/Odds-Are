@@ -61,12 +61,21 @@ class OddsViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.titleView = nil
         navigationItem.title = "Odds"
         addNavBarButtons()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "statusBarChanged", name: utility.statusBarChangeNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func statusBarChanged() {
+        height = view.bounds.size.height
+        width = view.bounds.size.width
+        tableView.frame = CGRectMake(0, 0, width, height)
+    }
+
     
     
     // MARK: nav bar methods
